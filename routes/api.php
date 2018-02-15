@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('view-images/{id}/{token}','ImageController@authenticate');
+
 Route::get('insert','StudInsertController@insertform');
 Route::post('create','StudInsertController@insert');
 Route::get('new-user','StudInsertController@newUser');
