@@ -12,14 +12,16 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('view-images/{id}/{token}','ImageController@authenticate');
+$router->get('authenticate', 'ImageController@Auth');
+$router->get('new-category', 'ImageController@NewCategory');
+$router->get('get-categories', 'ImageController@GetCategories');
 
-Route::get('insert','StudInsertController@insertform');
-Route::post('create','StudInsertController@insert');
-Route::get('new-user','StudInsertController@newUser');
-Route::get('view-records','StudViewController@index');
-Route::get('edit-records','StudUpdateController@index');
-Route::get('edit/{id}','StudUpdateController@show');
-Route::post('edit/{id}','StudUpdateController@edit');
-Route::get('delete-records','StudDeleteController@index');
-Route::get('delete/{id}','StudDeleteController@destroy');
+// Route::get('insert','StudInsertController@insertform');
+// Route::post('create','StudInsertController@insert');
+// Route::get('new-user','StudInsertController@newUser');
+// Route::get('view-records','StudViewController@index');
+// Route::get('edit-records','StudUpdateController@index');
+// Route::get('edit/{id}','StudUpdateController@show');
+// Route::post('edit/{id}','StudUpdateController@edit');
+// Route::get('delete-records','StudDeleteController@index');
+// Route::get('delete/{id}','StudDeleteController@destroy');
